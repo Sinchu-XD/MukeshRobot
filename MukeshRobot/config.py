@@ -32,7 +32,7 @@ class Config(object):
     NO_LOAD = []
     STRICT_GBAN = True
     TEMP_DOWNLOAD_DIRECTORY = "./"
-    WORKERS = 8
+    WORKERS = 20
     
 
 class Production(Config):
