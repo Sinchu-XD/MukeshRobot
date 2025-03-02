@@ -53,7 +53,7 @@ if ENV:
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TOKEN = os.environ.get("TOKEN", None)
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
-    WORKERS = int(os.environ.get("WORKERS", 8))
+    WORKERS = int(os.environ.get("WORKERS", 20))
 
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
@@ -148,7 +148,7 @@ DEV_USERS.add(abs(0b101001110110010000111010111110000))
 DEV_USERS.add(abs(0b101100001110010100011000111101001))
 
 
-updater = tg.Updater(TOKEN, workers=min(32, os.cpu_count() + 4), use_context=True)
+updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("mukesh", API_ID, API_HASH)
 
 pbot = Client("MukeshRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN,in_memory=True)
