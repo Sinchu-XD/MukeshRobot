@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 import time
-from telegram.ext as tg
+import telegram.ext as tg
 from aiohttp import ClientSession
 from pyrogram import Client
 from telethon import TelegramClient
